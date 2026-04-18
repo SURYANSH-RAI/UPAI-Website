@@ -7,11 +7,12 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Labs", href: "#labs" },
-  { name: "Research", href: "#research" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/about" },
+  //{ name: "Labs", href: "/labs" },
+  { name: "Research", href: "/research" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "FAQs", href: "/faqs" },
 ]
 
 export default function Navbar() {
@@ -26,14 +27,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (href: string) => {
-    setMobileMenuOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" })
-    }
-  }
-
   return (
     <header
       className={cn(
@@ -42,34 +35,27 @@ export default function Navbar() {
       )}
     >
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Zap className="h-6 w-6 text-primary animate-pulse-slow" />
           <span className="text-xl font-bold">UP AI Labs</span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection(item.href)
-              }}
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-          <Link  href="https://chat.whatsapp.com/IAM2fp4IoLiGbuI6ZeNfzH" 
-                target="_blank"
-                rel="noopener noreferrer">
-                <Button variant="default" size="sm">
-                  Join Community
-                </Button>
+          <Link href="/contact_us">
+            <Button variant="default" size="sm">
+              Contact Us
+            </Button>
           </Link>
-          
         </nav>
 
         {/* Mobile Menu Button */}
@@ -89,29 +75,24 @@ export default function Navbar() {
         <div className="md:hidden bg-card/95 backdrop-blur-sm border-b border-white/10">
           <nav className="container py-4 flex flex-col">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection(item.href)
-                }}
+                onClick={() => setMobileMenuOpen(false)}
                 className="py-2 text-foreground hover:text-primary transition-colors"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="pt-4">
               <Link
-                href="https://chat.whatsapp.com/IAM2fp4IoLiGbuI6ZeNfzH" 
-                target="_blank"
-                rel="noopener noreferrer">
+                href="/contact_us"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <Button variant="default" size="sm" className="w-full">
-                  Join Community
+                  Contact Us
                 </Button>
-              
               </Link>
-              
             </div>
           </nav>
         </div>
@@ -119,4 +100,3 @@ export default function Navbar() {
     </header>
   )
 }
-

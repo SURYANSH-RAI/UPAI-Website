@@ -5,6 +5,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://upai.org'),
   title: "UP AI Labs | Uttar Pradesh Artificial Intelligence Initiative",
   description: "Uttar Pradesh AI Labs - Leading AI innovation, research, and education in UP. Join our community of AI researchers, developers, and industry experts.",
   keywords: "UP AI, Uttar Pradesh AI, Artificial Intelligence UP, AI Labs Uttar Pradesh, Machine Learning UP, AI Research India, UP Tech Innovation, AI Education UP",

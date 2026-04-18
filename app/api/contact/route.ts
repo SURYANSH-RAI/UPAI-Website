@@ -41,16 +41,19 @@ export async function POST(request: Request) {
 
   try {
     const info = await transporter.sendMail({
-      from: USER,
-      to: email,
-      subject: "Thanks for contacting UP AI Labs!",
-      html: `
-        <p>Hi ${name},</p>
-        <p>We received your message:</p>
-        <blockquote>${message}</blockquote>
-        <p>We’ll get back to you shortly.</p>
-      `,
-    });
+        from: `"UP AI Labs" <${USER}>`,
+        to: email,
+        subject: "Thanks for contacting UP AI Labs!",
+        text: `Hi ${name},\n\nThank you for reaching out. We'll get back to you soon.\n\n– UP AI Labs`,
+        html: `
+          <div style="font-family: Arial, sans-serif; color: #333;">
+            <p>Hi ${name},</p>
+            <p>Thanks for getting in touch with UP AI Labs. We’ve received your message and one of our team members will respond shortly.</p>
+            <p>Regards,<br/>The UP AI Labs Team</p>
+          </div>
+        `,
+        replyTo: email,
+      });
 
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));

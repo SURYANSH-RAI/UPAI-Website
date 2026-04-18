@@ -3,14 +3,39 @@ import Image from "next/image"
 
 const partners = [
 	{
-		name: "Tensorflow",
-		logo: "/tfuglucknow.png",
-		type: "Industry",
+		name: "AI Community Lucknow",
+		logo: "/ai-community-lucknow.png",
+		type: "Community",
 	},
 	{
 		name: "GDG Lucknow",
 		logo: "/gdglucknow.png",
 		type: "Academic",
+	},
+	{
+		name: "CIC",
+		logo: "/cic.png",
+		type: "Partner",
+	},
+	{
+		name: "C2Air",
+		logo: "/c2air.png",
+		type: "Partner",
+	},
+	{
+		name: "Tikaj",
+		logo: "/tikaj.png",
+		type: "Partner",
+	},
+	{
+		name: "Umaga",
+		logo: "/umaga.png",
+		type: "Partner",
+	},
+	{
+		name: "HuntoAI",
+		logo: "/huntoai.png",
+		type: "Partner",
 	},
 ]
 
@@ -36,7 +61,7 @@ export default function PartnersSection() {
 						{partners.map((partner, index) => (
 							<div
 								key={index}
-								className="group relative flex items-center justify-center h-32 w-full"
+								className={`group relative flex items-center justify-center h-32 w-full ${partner.name === "HuntoAI" ? "col-span-2 md:col-span-1 md:col-start-2" : ""}`}
 							>
 								{partner.logo ? (
 									<>

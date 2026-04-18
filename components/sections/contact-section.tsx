@@ -66,7 +66,7 @@ export default function ContactSection() {
                   <p className="text-muted-foreground">
                     UP AI Labs Headquarters
                     <br />
-                    IT Park, Lucknow
+                    Triveni Nagar, Lucknow
                     <br />
                     Uttar Pradesh, India
                   </p>
@@ -92,17 +92,19 @@ export default function ContactSection() {
                 <Phone className="h-5 w-5 text-secondary mt-0.5" />
                 <div>
                   <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+91 522 123 4567</p>
+                  <p className="text-muted-foreground">+91 9336247359</p>
                 </div>
               </div>
             </div>
-            <Link href="https://chat.whatsapp.com/IAM2fp4IoLiGbuI6ZeNfzH" 
-                target="_blank"
-                rel="noopener noreferrer" >
-            <Button size="lg" variant="secondary" className="gap-2 group">
-              Become a Member
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link
+              href="https://chat.whatsapp.com/IAM2fp4IoLiGbuI6ZeNfzH"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="secondary" className="gap-2 group">
+                Become a Member
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </Link>
           </div>
 
@@ -163,7 +165,9 @@ export default function ContactSection() {
               {status && (
                 <p
                   className={`mt-2 text-sm ${
-                    status.startsWith("Error") ? "text-red-500" : "text-green-500"
+                    status.startsWith("Error")
+                      ? "text-red-500"
+                      : "text-green-500"
                   }`}
                 >
                   {status}

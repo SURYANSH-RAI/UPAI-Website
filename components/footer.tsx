@@ -42,28 +42,28 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#about" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/about" className="text-muted-foreground hover:text-secondary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#labs" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/labs" className="text-muted-foreground hover:text-secondary transition-colors">
                   Labs
                 </Link>
               </li>
               <li>
-                <Link href="#research" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/research" className="text-muted-foreground hover:text-secondary transition-colors">
                   Research
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/projects" className="text-muted-foreground hover:text-secondary transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-muted-foreground hover:text-secondary transition-colors">
-                  Contact
+                <Link href="/faqs" className="text-muted-foreground hover:text-secondary transition-colors">
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -73,27 +73,27 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="https://medium.com/@aadityaura_26777" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="https://medium.com/@aadityaura_26777" className="text-muted-foreground hover:text-secondary transition-colors" target="_blank" rel="noopener noreferrer">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/research" className="text-muted-foreground hover:text-secondary transition-colors">
                   Research Papers
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="https://www.youtube.com/@lucknowailabs/videos" className="text-muted-foreground hover:text-secondary transition-colors" target="_blank" rel="noopener noreferrer">
                   Tutorials
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/projects" className="text-muted-foreground hover:text-secondary transition-colors">
                   Open Source Projects
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-secondary transition-colors">
+                <Link href="/contact_us" className="text-muted-foreground hover:text-secondary transition-colors">
                   Community Guidelines
                 </Link>
               </li>
